@@ -1,0 +1,55 @@
+{
+  "name": "@framjet/yup-json",
+  "description": "A powerful and flexible library that allows you to define Yup validation schemas using JSON structures. This makes it easy to create, serialize, and share complex validation rules across different parts of your application or even between the frontend and backend.",
+  "version": "0.0.1",
+  "license": "MIT",
+  "author": "Aurimas Niekis <aurimas@niekis.lt>",
+  "homepage": "https://github.com/framjet/typescript-framjet-yup-json#readme",
+  "contributors": [
+    {
+      "name": "Aurimas Niekis",
+      "email": "aurimas@niekis.lt",
+      "url": "https://aurimas.niekis.lt"
+    }
+  ],
+  "bugs": {
+    "bugs": {
+      "url": "https://github.com/framjet/typescript-framjet-yup-json/issues",
+      "email": "team@framjet.dev"
+    }
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/framjet/typescript-framjet-yup-json.git"
+  },
+  "scripts": {
+    "build": "nx build",
+    "test": "nx test"
+  },
+  "dependencies": {
+    "date-fns": "^3.6.0",
+    "tslib": "^2.3.0",
+    "yup": "^1.4.0"
+  },
+  "devDependencies": {
+    "@nx/eslint": "19.4.1",
+    "@nx/eslint-plugin": "19.4.1",
+    "@nx/rollup": "^19.4.1",
+    "@nx/workspace": "19.4.1",
+    "@swc-node/register": "~1.9.1",
+    "@swc/core": "~1.5.7",
+    "@swc/helpers": "~0.5.11",
+    "@typescript-eslint/eslint-plugin": "^7.3.0",
+    "@typescript-eslint/parser": "^7.3.0",
+    "eslint": "~8.57.0",
+    "eslint-config-prettier": "^9.0.0",
+    "nx": "19.4.1",
+    "prettier": "^2.6.2",
+    "typescript": "~5.5.3"
+  },
+  "nx": {
+    "includedScripts": []
+  },
+  "main": "./index.cjs.js",
+  "typings": "./src/index.d.ts"
+}
