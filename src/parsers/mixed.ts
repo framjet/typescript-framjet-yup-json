@@ -5,7 +5,7 @@ import { mixed, type MixedSchema } from 'yup';
 export class MixedValidationTypeParser extends BaseValidationTypeParser<MixedValidationType, MixedTypeRules, MixedSchema> {
   parse(type: MixedValidationType): MixedSchema {
     return this.parseRules(
-      type.rules ?? [],
+      type,
       this.createSchema()
     );
   }

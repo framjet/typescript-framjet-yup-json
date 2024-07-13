@@ -1,6 +1,5 @@
 import { type Referable, type Rule, type ValidationType, type ValidationTypeSchemaType } from '../rule';
 import { ref, Reference, type Schema } from 'yup';
-import type { ProcessRules } from '../utils';
 import type { ValidationTypeParser } from '../parser';
 import type { SchemaTypeRules } from '../rules';
 import { parseYupDefinition } from '../';
@@ -19,13 +18,20 @@ export abstract class BaseValidationTypeParser<TValidationType extends Validatio
     this.customValidations.set(name, validator);
   }
 
-  protected parseRules(rules: ProcessRules<TRule>[], schema: TSchema): TSchema {
+  protected parseRules(validationType: TValidationType, schema: TSchema): TSchema {
+    const rules = validationType['rules'] ?? [];
+
     let s = schema;
+
+    if (validationType.label != null) {
+      s = s.label(validationType.label);
+    }
+
     for (const rule of rules) {
       if (typeof rule !== 'string') {
         s = this.parseRule(rule as never, s);
       } else {
-        s = this.parseRule({ t: rule }, s);
+        s = this.parseRule({ t: rule as never }, s);
       }
     }
 

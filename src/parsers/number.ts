@@ -5,7 +5,7 @@ import { number, type NumberSchema } from 'yup';
 export class NumberValidationTypeParser extends BaseValidationTypeParser<NumberValidationType, NumberTypeRules, NumberSchema> {
   parse(type: NumberValidationType): NumberSchema {
     return this.parseRules(
-      type.rules ?? [],
+      type,
       this.createSchema()
     );
   }

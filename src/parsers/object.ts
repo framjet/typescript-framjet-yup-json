@@ -6,7 +6,7 @@ import type { Referable, ValidationType, ValidationTypeSchemaType } from '../rul
 export class ObjectValidationTypeParser extends BaseValidationTypeParser<ObjectValidationType, ObjectTypeRules, ObjectSchema<any>> {
   parse(type: ObjectValidationType): ObjectSchema<any> {
     return this.parseRules(
-      type.rules ?? [],
+      type,
       this.createSchema(type)
     );
   }

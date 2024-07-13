@@ -1,7 +1,7 @@
 {
   "name": "@framjet/yup-json",
   "description": "A powerful and flexible library that allows you to define Yup validation schemas using JSON structures. This makes it easy to create, serialize, and share complex validation rules across different parts of your application or even between the frontend and backend.",
-  "version": "0.0.1",
+  "version": "0.0.2",
   "license": "MIT",
   "author": "Aurimas Niekis <aurimas@niekis.lt>",
   "homepage": "https://github.com/framjet/typescript-framjet-yup-json#readme",

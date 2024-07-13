@@ -6,7 +6,7 @@ import { date, type DateSchema, type Reference } from 'yup';
 export class DateValidationTypeParser extends BaseValidationTypeParser<DateValidationType, DateTypeRules, DateSchema> {
   parse(type: DateValidationType): DateSchema {
     return this.parseRules(
-      type.rules ?? [],
+      type,
       this.createSchema()
     );
   }

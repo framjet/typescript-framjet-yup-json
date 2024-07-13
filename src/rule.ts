@@ -14,6 +14,7 @@ export const YupSchemaType: unique symbol = Symbol.for('YupSchemaType');
 
 export interface BaseValidationType<TSchema extends Schema<any>> {
   t: string;
+  label?: string;
   readonly [YupSchemaType]?: TSchema;
 }
 

@@ -5,7 +5,7 @@ import { array, type ArraySchema } from 'yup';
 export class ArrayValidationTypeParser extends BaseValidationTypeParser<ArrayValidationType, ArrayTypeRules, ArraySchema<any, any>> {
   parse(type: ArrayValidationType): ArraySchema<any, any> {
     return this.parseRules(
-      type.rules ?? [],
+      type,
       this.createSchema(type)
     );
   }

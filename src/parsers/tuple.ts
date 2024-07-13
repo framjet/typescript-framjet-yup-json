@@ -17,6 +17,12 @@ export class TupleValidationTypeParser extends BaseValidationTypeParser<TupleVal
       return this.parseValidatorType(i);
     });
 
-    return tuple(items as never);
+    const schema = tuple(items as never);
+
+    if (type.label != null) {
+      return schema.label(type.label);
+    }
+
+    return schema;
   }
 }

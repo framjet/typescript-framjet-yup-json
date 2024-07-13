@@ -5,7 +5,7 @@ import { string, StringSchema } from 'yup';
 export class StringValidationTypeParser extends BaseValidationTypeParser<StringValidationType, StringTypeRules, StringSchema> {
   parse(type: StringValidationType): StringSchema {
     return this.parseRules(
-      type.rules ?? [],
+      type,
       this.createSchema()
     );
   }

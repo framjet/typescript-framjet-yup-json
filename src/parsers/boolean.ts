@@ -5,7 +5,7 @@ import { boolean, type BooleanSchema } from 'yup';
 export class BooleanValidationTypeParser extends BaseValidationTypeParser<BooleanValidationType, BooleanTypeRules, BooleanSchema> {
   parse(type: BooleanValidationType): BooleanSchema {
     return this.parseRules(
-      type.rules ?? [],
+      type,
       this.createSchema()
     );
   }
